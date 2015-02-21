@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listView>
+   <job>
+      <name>Magento-Template-LIVE</name>
+      <url>http://jenkins.knallimall.org/jenkins/job/Magento-Template-LIVE/</url>
+      <color>blue</color>
+   </job>
+   <job>
+      <name>Magento-Template-TEST</name>
+      <url>http://jenkins.knallimall.org/jenkins/job/Magento-Template-TEST/</url>
+      <color>blue</color>
+   </job>
+   <job>
+      <name>TYPO3-Template</name>
+      <url>http://jenkins.knallimall.org/jenkins/job/TYPO3-Template/</url>
+      <color>blue</color>
+   </job>
+   <name>TEAMPLATES</name>
+   <url>http://jenkins.knallimall.org/jenkins/view/TEAMPLATES/</url>
+</listView>

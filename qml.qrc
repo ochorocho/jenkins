@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>data.xml</file>
+        <file>img/logo.png</file>
+        <file>img/logo.svg</file>
+        <file>img/logo_large.png</file>
+        <file>img/logo_low.png</file>
+        <file>img/logo_medium.png</file>
+        <file>img/iOS/Icon-60.png</file>
+        <file>img/iOS/Icon-72.png</file>
+        <file>img/iOS/Icon-72@2x.png</file>
+        <file>img/iOS/Icon-Small-50.png</file>
+        <file>img/iOS/Icon-Small-50@2x.png</file>
+        <file>img/iOS/Icon.png</file>
+        <file>img/iOS/Icon@2x.png</file>
+    </qresource>
+</RCC>
