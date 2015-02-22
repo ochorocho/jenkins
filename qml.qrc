@@ -14,5 +14,10 @@
         <file>img/iOS/Icon-Small-50@2x.png</file>
         <file>img/iOS/Icon.png</file>
         <file>img/iOS/Icon@2x.png</file>
+        <file>Style.qml</file>
+        <file>img/unstable.png</file>
+        <file>img/blue.png</file>
+        <file>img/notbuilt.png</file>
+        <file>img/disabled.png</file>
     </qresource>
 </RCC>

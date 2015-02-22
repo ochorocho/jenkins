@@ -3,10 +3,10 @@ import QtQuick.Window 2.0
 import QtQuick.XmlListModel 2.0
 
 Window {
-    id: window1
+    id: jenkins
     visible: true
-    width: parent.width
-    height: parent.height
+    width: Screen.desktopAvailableWidth
+    height: Screen.desktopAvailableHeight
     color: "#303030"
 
     XmlListModel {
@@ -22,32 +22,56 @@ Window {
             name: "url"
             query: "url/string()"
         }
+        XmlRole {
+            name: "colorBuild"
+            query: "color/string()"
+        }
     }
 
     GridView {
         id: gridView1
         cacheBuffer: 306
         anchors.fill: parent
+
+        anchors.top: parent.top
+        anchors.topMargin: 24
+
         cellHeight: 60
         delegate: Item {
-            x: 5
             Column {
                 Rectangle {
-                    color: "#000000"
-                    height: 30
-                    width: parent.width - 30
-                    opacity: 0.5
+                    color: colorBuild
+                    height: gridView1.cellHeight - 10
+                    width: gridView1.width / 3 - 16
+                    opacity: 0.9
+                    x: 10
+
                     Text {
+                        width: parent.width - 40
                         text: name
                         color: "#ffffff"
                         font.bold: true
-                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize: 10
+                        wrapMode: Text.WrapAnywhere
+                        anchors.right: parent.right
+                        anchors.leftMargin: 5
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                    Image {
+                        id: buildCondition
+                        anchors.left: parent.left
+                        anchors.verticalCenter: parent.verticalCenter
+                        width: 34
+                        height: 32
+                        z: 1
+                        fillMode: Image.PreserveAspectFit
+                        source: "img/" + colorBuild + '.png'
                     }
                 }
             }
         }
         model: xmlModel
-        cellWidth: window1.width / 3
+        cellWidth: jenkins.width / 3
     }
 
     Rectangle {
@@ -64,12 +88,10 @@ Window {
         Image {
             id: image1
             x: 4
-            anchors.left: parent.horizontalCenter
+            anchors.left: parent.left
             anchors.verticalCenter: parent.verticalCenter
             width: 34
             height: 32
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.leftMargin: -397
             z: 2
             fillMode: Image.PreserveAspectFit
             source: "img/logo.png"
